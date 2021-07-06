@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>서울시 동별 정보</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>구</B></td>
+            <td><B>이름</B></td>
+            <td><B>인구</B></td>
+            <td><B>공원</B></td>
+            <td><B>유치원</B></td>
+            <td><B>초등학교</B></td>
+            <td><B>중학교</B></td>
+            <td><B>고등학교</B></td>
+            <td><B>특수학교</B></td>
+            <td><B>학원</B></td>
+            <td><B>여가시설</B></td>
+            <td><B>음식점</B></td>
+            <td><B>의료시설</B></td>
+            <td><B>공기오염도</B></td>
+            <td><B>CCTV</B></td>
+            <td><B>노인복지시설</B></td>
+            <td><B>체육시설</B></td>
+            <td><B>공공도서관</B></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in dong%}
+        <tr>
+            <td>{{i.district}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.population_all}}</td>
+            <td>{{i.park}}</td>
+            <td>{{i.kindergarten}}</td>
+            <td>{{i.school_elementary}}</td>
+            <td>{{i.school_middle}}</td>
+            <td>{{i.school_high}}</td>
+            <td>{{i.school_special}}</td>
+            <td>{{i.hagwon}}</td>
+            <td>{{i.leisure}}</td>
+            <td>{{i.restaurant}}</td>
+            <td>{{i.medical}}</td>
+            <td>{{i.air_pollution}}</td>
+            <td>{{i.cctv}}</td>
+            <td>{{i.senior_center}}</td>
+            <td>{{i.sport_facility}}</td>
+            <td>{{i.library}}</td>
+        </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+</body>
